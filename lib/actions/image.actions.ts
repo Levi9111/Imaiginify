@@ -153,7 +153,7 @@ export async function getAllImages({
       savedImages,
     };
   } catch (error) {
-    // handleError(error);
-    console.log(error);
+    handleError(error);
+    // console.log(error);
   }
 }
