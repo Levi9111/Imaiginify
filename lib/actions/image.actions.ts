@@ -7,9 +7,9 @@ import User from '../database/models/user.model';
 import Image from '../database/models/image.model';
 import { redirect } from 'next/navigation';
 import { v2 as cloudinary } from 'cloudinary';
-import { TLSSocket } from 'tls';
+// import { TLSSocket } from 'tls';
 
-TLSSocket.defaultMaxListeners = 25;
+// TLSSocket.defaultMaxListeners = 25;
 
 const populateUser = (query: any) => {
   return query.populate({
