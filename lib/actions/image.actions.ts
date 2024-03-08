@@ -29,7 +29,6 @@ export async function addImage({ image, userId, path }: AddImageParams) {
     if (!author) {
       throw new Error(`User not found`);
     }
-    console.log(author._id, 'Image:=>', image, 'Path:=>', path);
 
     const newImage = await Image.create({
       ...image,
@@ -88,8 +87,8 @@ export async function getImageById(imageId: string) {
     await connectToDatabase();
 
     const image = await populateUser(Image.findById(imageId));
-
     if (!image) throw new Error(`Image  not found`);
+    return JSON.parse(JSON.stringify(image));
   } catch (error) {
     handleError(error);
   }

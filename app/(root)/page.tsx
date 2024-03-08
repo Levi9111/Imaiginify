@@ -18,7 +18,6 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
   // TODO: Fix Bug
   const images = await getAllImages({ page, searchQuery });
-
   return (
     <>
       <section className='home'>
